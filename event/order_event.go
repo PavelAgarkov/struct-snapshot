@@ -1,4 +1,5 @@
-//package event
+package event
+
 //
 //var OrderListeningEvent ListeningEvent = "event.order"
 //

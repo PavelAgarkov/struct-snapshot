@@ -1,4 +1,5 @@
-//package subscriber
+package subscriber
+
 //
 //import (
 //	"fmt"

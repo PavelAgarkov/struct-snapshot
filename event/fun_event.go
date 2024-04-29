@@ -1,4 +1,5 @@
-//package event
+package event
+
 //
 //var FunListeningEvent ListeningEvent = "event.fun"
 //
