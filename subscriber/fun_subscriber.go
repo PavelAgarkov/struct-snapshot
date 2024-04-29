@@ -2,7 +2,7 @@ package subscriber
 
 import (
 	"fmt"
-	"github.com/PavelAgarkov/struct-snapshot/internal/event"
+	"github.com/PavelAgarkov/struct-snapshot/event"
 )
 
 type FunSubscriber struct {
