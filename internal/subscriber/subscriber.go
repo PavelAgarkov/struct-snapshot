@@ -1,6 +1,6 @@
 package subscriber
 
-import "struct-snapshot/internal/event"
+import "github.com/PavelAgarkov/struct-snapshot/internal/event"
 
 type Subscriber interface {
 	SetListenEvents(events []event.ListeningEvent)

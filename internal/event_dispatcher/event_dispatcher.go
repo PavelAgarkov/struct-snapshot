@@ -1,9 +1,9 @@
 package event_dispatcher
 
 import (
+	"github.com/PavelAgarkov/struct-snapshot/internal/event"
+	"github.com/PavelAgarkov/struct-snapshot/internal/subscriber"
 	"slices"
-	"struct-snapshot/internal/event"
-	"struct-snapshot/internal/subscriber"
 )
 
 type EventDispatcher struct {

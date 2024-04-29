@@ -1,4 +1,4 @@
-module struct-snapshot
+module github.com/PavelAgarkov/struct-snapshot
 
 go 1.21.6
 
