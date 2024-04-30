@@ -1,11 +1,9 @@
-package model
+package main
 
 import (
 	"github.com/huandu/go-clone"
 	"time"
 )
-
-const OrderHistoryStream = "order_history"
 
 const (
 	ObservableOrderBrigade   = BrigadeReq
@@ -42,11 +40,7 @@ type Order struct {
 	Total       int64
 }
 
-func (o *Order) GetTargetStream() string {
-	return OrderHistoryStream
-}
-
-func (o *Order) MakeNewSnapshot(tag string) {
+func (o *Order) DoSnapshot(tag string) {
 	order := clone.Clone(o).(*Order)
 	o.Snap.makeNewSnapshot(order, tag)
 }

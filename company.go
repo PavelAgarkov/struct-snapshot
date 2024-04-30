@@ -1,11 +1,9 @@
-package model
+package main
 
 import (
 	"github.com/huandu/go-clone"
 	"time"
 )
-
-const CompanyHistoryStream = "company_history"
 
 const (
 	ObservableCompanyWbUserId           = WbUserId
@@ -55,11 +53,7 @@ type Company struct {
 	TaxSystem          string `db:"tax_form"`
 }
 
-func (c *Company) GetTargetStream() string {
-	return CompanyHistoryStream
-}
-
-func (c *Company) MakeNewSnapshot(tag string) {
+func (c *Company) DoSnapshot(tag string) {
 	company := clone.Clone(c).(*Company)
 	c.Snap.makeNewSnapshot(company, tag)
 }

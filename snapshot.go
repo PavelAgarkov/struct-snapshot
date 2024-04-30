@@ -1,4 +1,4 @@
-package model
+package main
 
 type Changes map[string]*Field
 
@@ -21,7 +21,7 @@ type Snap struct {
 	snapshots []*Snapshot
 }
 
-func NewSnapshot(entity Entity, history History) *Snap {
+func NewSnap(entity Entity, history History) *Snap {
 	return &Snap{
 		current:   entity,
 		history:   history,

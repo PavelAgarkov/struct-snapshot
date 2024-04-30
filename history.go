@@ -1,8 +1,7 @@
-package model
+package main
 
 type Entity interface {
-	GetTargetStream() string
-	MakeNewSnapshot(tag string)
+	DoSnapshot(tag string)
 }
 
 type History interface {
