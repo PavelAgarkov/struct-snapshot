@@ -1,4 +1,4 @@
-package main
+package struct_snapshot
 
 import (
 	"github.com/huandu/go-clone"

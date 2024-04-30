@@ -1,11 +1,11 @@
-package main
+package struct_snapshot
 
 import (
 	"fmt"
-	_ "time"
+	"testing"
 )
 
-func main() {
+func TestDispatching(t *testing.T) {
 	old := &Order{
 		Snap: NewSnap(
 			&Order{},
@@ -34,25 +34,4 @@ func main() {
 
 	fmt.Println(old.GetSnapshotByTag("v2").GetChanges()["status"], "<---------------------->")
 	fmt.Println(old.GetSnapshotByIndex(1), "<nil----------------------nil>")
-	//
-	//	// event dispatcher
-	//	ed := event_dispatcher.NewEventDispatcher()
-	//	ed.RegisterSubscriber(
-	//		subscriber.NewOrderSubscriber(),
-	//		[]event.ListeningEvent{
-	//			event.OrderListeningEvent,
-	//			//event.FunListeningEvent,
-	//		},
-	//	)
-	//
-	//	ed.RegisterSubscriber(
-	//		subscriber.NewFunSubscriber(),
-	//		[]event.ListeningEvent{
-	//			event.OrderListeningEvent,
-	//			event.FunListeningEvent,
-	//		},
-	//	)
-	//
-	//	ed.Dispatch(event.NewOrderEvent())
-	//	ed.Dispatch(event.NewFunEvent())
 }

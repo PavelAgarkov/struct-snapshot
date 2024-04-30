@@ -1,4 +1,4 @@
-package main
+package struct_snapshot
 
 type Entity interface {
 	DoSnapshot(tag string)

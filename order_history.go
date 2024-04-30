@@ -1,4 +1,4 @@
-package main
+package struct_snapshot
 
 type OrderHistory struct {
 	OldEntity     *Order

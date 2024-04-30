@@ -1,4 +1,4 @@
-package main
+package struct_snapshot
 
 type CompanyHistory struct {
 	OldEntity     *Company
