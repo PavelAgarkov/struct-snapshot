@@ -37,23 +37,23 @@ type Companies []Company
 
 type Company struct {
 	*Snap
-	Id                 int64  `db:"id"`
-	FormOfOrganization string `db:"form_of_organization"`
-	Inn                string `db:"tax_id"`
-	CompanyName        string `db:"company_name"`
-	CeoFio             string `db:"ceo_fio"`
+	Id                 int64
+	FormOfOrganization string
+	Inn                string
+	CompanyName        string
+	CeoFio             string
 	CreatedDate        *time.Time
 	UpdatedAt          *time.Time
-	OrderLimit         int64  `db:"order_limit"`
-	IsActive           bool   `db:"is_active"`
-	IsTrusted          bool   `db:"is_trusted"`
-	Address            string `db:"address"`
-	Email              string `db:"email"`
-	WbUserId           int64  `db:"wb_user_id"`
-	TaxSystem          string `db:"tax_form"`
+	OrderLimit         int64
+	IsActive           bool
+	IsTrusted          bool
+	Address            string
+	Email              string
+	WbUserId           int64
+	TaxSystem          string
 }
 
 func (c *Company) DoSnapshot(tag string) {
-	company := clone.Clone(c).(*Company)
-	c.Snap.makeNewSnapshot(company, tag)
+	companyClone := clone.Clone(c).(*Company)
+	c.Snap.makeNewSnapshot(companyClone, tag)
 }

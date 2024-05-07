@@ -1,7 +1,6 @@
 package struct_snapshot
 
 import (
-	"github.com/huandu/go-clone"
 	"time"
 )
 
@@ -41,6 +40,10 @@ type Order struct {
 }
 
 func (o *Order) DoSnapshot(tag string) {
-	order := clone.Clone(o).(*Order)
-	o.Snap.makeNewSnapshot(order, tag)
+	//order := clone.Clone(o).(*Order)
+	//o.Snap.makeNewSnapshot(order, tag)
+
+	order := *o
+	orderCopy := &order
+	o.Snap.makeNewSnapshot(orderCopy, tag)
 }
